@@ -5,7 +5,7 @@ def part_2():
     curr_pos = 50
     zero_count = 0
 
-    with open("/tmp/day_1_input.txt") as file:
+    with open("day_1_input.txt") as file:
         for line in file:
             prev_pos = curr_pos
             direction, move_count = add if line[0] == "R" else sub, int(line[1:])
@@ -20,7 +20,7 @@ def part_2():
                 if curr_pos != prev_pos and prev_pos != 0:
                     zero_count += 1
 
-    return zero_count
+    print(zero_count)
 
 
 part_2()
