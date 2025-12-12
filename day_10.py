@@ -1,11 +1,11 @@
 import numpy as np
 
-with open("day_10_input.txt") as file:
-    machines_instructions = file.read().strip()
-    machines_instructions = machines_instructions.split("\n")
-
 
 def part_1(debug: bool = False):
+    with open("day_10_input.txt") as file:
+        machines_instructions = file.read().strip()
+        machines_instructions = machines_instructions.split("\n")
+
     sum_min_combinations = 0
 
     for mi in range(len(machines_instructions)):
@@ -70,6 +70,10 @@ def part_2(debug: bool = False):
 
     Fell back to constrained optim libraries to solve the problem (see part2_with_solver).
     """
+    with open("day_10_input.txt") as file:
+        machines_instructions = file.read().strip()
+        machines_instructions = machines_instructions.split("\n")
+
     sum_min_combinations = 0
 
     for mi in range(len(machines_instructions)):
